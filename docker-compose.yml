@@ -9,7 +9,7 @@ services:
     #   - ./prometheus:/etc/prometheus
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
-    restart: always
+    # restart: always
 
   grafana:
     image: grafana/grafana
@@ -19,4 +19,4 @@ services:
       - ./grafana:/var/lib/grafana
     depends_on:
       - prometheus
-    restart: always
+    # restart: always
